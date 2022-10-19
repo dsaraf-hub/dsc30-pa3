@@ -2,48 +2,6 @@ import java.util.ArrayList;
 
 public class StandardRide implements RideScheduler{
 
-    public static void main(String args[]) throws OperationDeniedException {
-        Passenger p1 = new StandardPassenger("user1", "bio1");
-        Passenger p2 = new StandardPassenger("user2", "bio2");
-        Passenger p3 = new StandardPassenger("user3", "bio3");
-
-        Vehicle v1 = new EconomyVehicle("Honda1");
-        Vehicle v2 = new EconomyVehicle("Honda2");
-        Vehicle v3 = new EconomyVehicle("Honda3");
-        Vehicle v4 = new EconomyVehicle("Honda4");
-        Vehicle v5 = new EconomyVehicle("Honda5");
-
-
-        Passenger p4 = new ValuePassenger("value_user1", "value_bio1");
-        Passenger p5 = new ValuePassenger("value_user2", "value_bio2");
-        Passenger p6 = new ValuePassenger("value_user3", "value_bio3");
-        Passenger p7 = new ValuePassenger("value_user4", "value_bio4");
-
-        Vehicle v6 = new PremiumVehicle("bmw1");
-        Vehicle v7 = new PremiumVehicle("bmw2");
-
-
-        StandardRide sr = new StandardRide();
-        sr.addVehicle(v1);
-        sr.addVehicle(v2);
-        sr.addVehicle(v3);
-        sr.addVehicle(v4);
-        sr.addVehicle(v5);
-        sr.addVehicle(v6);
-        sr.addVehicle(v7);
-
-        sr.addPassenger(p1);
-        sr.addPassenger(p2);
-        sr.addPassenger(p3);
-        sr.addPassenger(p4);
-        sr.addPassenger(p5);
-        sr.addPassenger(p6);
-        sr.addPassenger(p7);
-
-        sr.assignPassengerToVehicle();
-        System.out.println(sr.getRecords());
-    }
-
     private final String MISMATCH_MSG =
             "Each passenger should have one vehicle matched.";
     private final String INVALID_ACTION =
